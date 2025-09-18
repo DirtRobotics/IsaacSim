@@ -40,3 +40,15 @@ REM Set RMW implementation to Fast DDS if not already set
 if "%RMW_IMPLEMENTATION%"=="" (
     set RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 )
+
+REM Display available RMW implementations
+echo Available RMW implementations:
+echo   - rmw_fastrtps_cpp (FastDDS - default)
+echo   - rmw_cyclonedds_cpp (CycloneDDS)
+echo   - rmw_zenoh_cpp (Zenoh)
+echo.
+echo Current RMW_IMPLEMENTATION: %RMW_IMPLEMENTATION%
+echo.
+echo To use Zenoh RMW, set: set RMW_IMPLEMENTATION=rmw_zenoh_cpp
+echo To use CycloneDDS RMW, set: set RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+echo.
